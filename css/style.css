@@ -79,6 +79,7 @@ article a:hover, article a:focus, .ind_aside a:hover, .ind_aside a:focus {
     left: 0;
     padding: 8px;
     z-index: 1000;
+    background-color: #FFFFFF;
 }
 
 .skip a:focus {
