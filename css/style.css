@@ -33,7 +33,8 @@ h3 {
     font-size: 1.05rem; 
     margin: 0 0 0.25rem; 
     padding: 0 0 0.25rem;
-    justify-content: center;
+    margin-top: 2rem;
+    color:#00488b;
 }
 
 p { 
@@ -45,7 +46,7 @@ ul, ol{
     padding-left: 1.5rem;
 }
 
-li + li {
+main li + li {
     margin-top: 0.5rem;
 }
 
@@ -62,15 +63,14 @@ hr {
 
     Google Gemini. (2026). Google (October 18th version).[Large language model]. */
 
-article a {
+article a, .ind_aside a {
     color: #00274C;
     text-decoration: underline;
 }
 
-article a:hover, article a:focus {
+article a:hover, article a:focus, .ind_aside a:hover, .ind_aside a:focus {
     color: #005aaf;
     text-decoration: none;
-    font-weight: 700;
 }
 
 .skip a {
@@ -89,6 +89,7 @@ article a:hover, article a:focus {
 *:focus {
     border: 2px solid #00274C;
     border-radius: 2px;
+    outline: 2px solid transparent;
 }
 
 /* Header stuff */
@@ -108,12 +109,12 @@ header img {
 nav ul {
     display: flex;
     justify-content: center;
+    /* flex-wrap: wrap; -- can't decide whether to use this. It makes it workable at really small viewports, but doesn't give the look I want at 480px (nav bar all in a row) */
     align-items: center;
     gap: 0.25rem 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 0.8rem;
 }
 
 nav a {
@@ -132,7 +133,11 @@ nav a:focus {
     border-color: #FFCB05;
 }
 
-nav a:hover, .active {
+nav a:hover {
+    border-bottom-color: #FFCB05;
+}
+
+.active {
     border-bottom-color: #FFCB05;
     font-weight: 700;
 }
@@ -168,8 +173,7 @@ main img {
     display: block;
     width: 95%;
     height: auto;
-    margin: auto;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
 }
  
 
@@ -182,7 +186,7 @@ main img {
 }
 
 .ind_sect3 h2,
-.ind_sect3 > p, .ind_sect3 hr, .beg_sect5 h3 {
+.ind_sect3 > p, .ind_sect3 hr, .beg_sect5 > h3 {
     grid-column: 1 / -1;
     margin: 0;
 }
@@ -206,6 +210,10 @@ main img {
     margin-bottom: 1rem;
 }
 
+.beg_sect5 article {
+    margin-top: -2.5rem;
+}
+
 .ind_sect4 article p {
     margin: 0 0 0 1.5rem;
     border-left: 2.5px solid #FFCB05;
@@ -213,31 +221,11 @@ main img {
 }
 
 /* ind_sect5 and ind_aside: Span everything, don't need grid */
-.ind_sect5 p,
-.ind_aside p {
-    margin: 0 0 0.75rem;
-}
 
 .ind_aside {
     background-color: #fff1b8;
     margin: 0.5rem -1rem -1rem;
     padding: 0.75rem 1rem;
-}
-
-.ind_aside a {
-    color: #00274C;
-    text-decoration: underline;
-}
-
-.ind_aside a:hover, .ind_aside a:focus {
-    color: #005aaf;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-h3 {
-    margin-top: 2rem;
-    color:#00488b;
 }
 
 /* Footer stuff*/
@@ -277,6 +265,7 @@ footer a:hover, footer a:focus {
     color: #fff6d0;
     text-decoration: none;
     font-weight: 700;
+    border-color: #FFCB05;
 }
 
 /* mostly lists and table styling stuff below */
