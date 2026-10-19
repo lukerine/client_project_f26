@@ -285,12 +285,18 @@ th, td {
   padding: 0.5rem;
   text-align: left;
   border-bottom: 1px solid #ddd;
+  overflow-wrap: anywhere;
 }
 
 th {
     text-align: center;
     background-color:#FFCB05;
     color: #00274C;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;  
 }
 
 /* Looked up how to style a table on w3schools, but I wrote the code myself. However, since I had to look it up, I wasn't sure if this needed to be cited, so I'm including citation to be safe here. https://www.w3schools.com/css/css_table_style.asp */
