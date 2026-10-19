@@ -1,0 +1,348 @@
+* {
+    font-family: Montserrat, "Nunito Sans", Merriweather, sans-serif;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+h1 { 
+    font-size: 1.5rem; 
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0.5rem -1rem 0; 
+    padding: 2.5rem 0rem;
+    background:
+    linear-gradient(rgba(0, 72, 139, 0.75), rgba(0, 72, 139, 0.75)), url("../images/h1bcg.jpg") center / cover no-repeat;
+    background-color: #00488b;
+    
+    /* Content taken & modified from Claude with the prompts: "I am trying to make my h1 background color span the full-width of the page. how do I do that?" & "How can I set a background image to my h1 so that the text on top is still clear but the image is slightly transparent/low opacity so you can still see the background color through it?"
+    margin and linear-gradient were the properties I was struggling with and what Claude primarily clarified here.
+    Claude. (2026). Claude (Sonnet 5.5 October 18th version) [Large language model]. */
+}
+h2 { 
+    font-size: 1.25rem; 
+    font-weight: 700;
+    color: #00274C; 
+    margin: 0 0 0.75rem;
+    text-transform: uppercase;
+}
+h3 { 
+    font-size: 1.05rem; 
+    margin: 0 0 0.25rem; 
+    padding: 0 0 0.25rem;
+    justify-content: center;
+}
+
+p { 
+    margin: 0 0 0.75rem;
+}
+
+ul, ol{
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+li + li {
+    margin-top: 0.5rem;
+}
+
+strong {
+    font-weight: 700;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #005aafb3;  
+}
+    /* Content taken & modified from Google gemini with the query: "how do I change the color of hr in css?"
+
+    Google Gemini. (2026). Google (October 18th version).[Large language model]. */
+
+article a {
+    color: #00274C;
+    text-decoration: underline;
+}
+
+article a:hover, article a:focus {
+    color: #005aaf;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.skip a {
+    position: absolute;
+    top: -65px;
+    left: 0;
+    padding: 8px;
+    z-index: 1000;
+}
+
+.skip a:focus {
+    top: 25px;
+    background-color: #FFFFFF;
+}
+
+*:focus {
+    border: 2px solid #00274C;
+    border-radius: 2px;
+}
+
+/* Header stuff */
+
+header {
+    background-color: #00274C;
+    padding: 0.75rem 1rem 0;
+}
+ 
+header img {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+}
+
+nav a {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.5rem 0.1rem;
+    border: 2px solid transparent;
+}
+
+nav a:focus {
+    border-color: #FFCB05;
+}
+
+nav a:hover, .active {
+    border-bottom-color: #FFCB05;
+    font-weight: 700;
+}
+
+.active:hover {
+    background-color: #0b3d6c;
+}
+
+/* Main content */
+
+main {
+    padding: 1rem;
+}
+
+main > section {
+    margin-bottom: 1.5rem;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 0;
+} 
+    /* Content taken & modified from Claude with the prompt: "how do I get a video to scale so it fits the viewport using css" 
+    Claude. (2026). Claude (Sonnet 5.5 October 18th version) [Large language model]. */
+
+
+/* ind_sect2 everything stacked/spans. In desktop view, I will want to make this so the image is on the left and list on the right. will revisit later. */
+ 
+main img {
+    display: block;
+    width: 95%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+ 
+
+/* ind_sect3: h2 & p span across the top, three articles side by side */
+.ind_sect3, .beg_sect5 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+.ind_sect3 h2,
+.ind_sect3 > p, .ind_sect3 hr, .beg_sect5 h3 {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.ind_sect3 article, .beg_sect5 article {
+    font-size: 0.875rem;
+}
+
+.beg_sect5 article h3 {
+    color: #000000;
+    border-bottom: 2.5px solid #FFCB05;
+    margin-bottom: 0.5rem;
+}
+.ind_sect3 article h3 {
+    border-bottom: 2.5px solid #FFCB05;
+    margin-bottom: 0.5rem;
+    margin-top: -0.25rem;
+}
+/* ind_sect4: everything full width, but paragraphs under each h3 indented */
+.ind_sect4 article {
+    margin-bottom: 1rem;
+}
+
+.ind_sect4 article p {
+    margin: 0 0 0 1.5rem;
+    border-left: 2.5px solid #FFCB05;
+    padding-left: 1rem;
+}
+
+/* ind_sect5 and ind_aside: Span everything, don't need grid */
+.ind_sect5 p,
+.ind_aside p {
+    margin: 0 0 0.75rem;
+}
+
+.ind_aside {
+    background-color: #fff1b8;
+    margin: 0.5rem -1rem -1rem;
+    padding: 0.75rem 1rem;
+}
+
+.ind_aside a {
+    color: #00274C;
+    text-decoration: underline;
+}
+
+.ind_aside a:hover, .ind_aside a:focus {
+    color: #005aaf;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+h3 {
+    margin-top: 2rem;
+    color:#00488b;
+}
+
+/* Footer stuff*/
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 0.5rem 1rem;
+    align-items: center;
+    padding: 1rem;
+    background-color: #00274C;
+    color: #FFFFFF;
+    
+}
+
+footer img {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    width: 100%;
+    height: auto;
+}
+
+footer p,
+footer address {
+    grid-column: 2;
+    margin: 0;
+    font-size: 0.8rem;
+    font-style: normal;
+}
+
+footer a {
+    color: #ffe684;
+    text-decoration: underline;
+}
+
+footer a:hover, footer a:focus {
+    color: #fff6d0;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* mostly lists and table styling stuff below */
+
+.questions li, .featuredres li, .dur_list li, .bestpract li {
+    list-style-type: circle;
+}
+
+.questions ul, .dur_list ul, .bestpract ul{
+    border-left: 2.5px solid #FFCB05;
+    padding-left: 1.6rem;
+    margin-left: 0.25rem;
+}
+
+th, td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+    text-align: center;
+    background-color:#FFCB05;
+    color: #00274C;
+}
+
+/* Looked up how to style a table on w3schools, but I wrote the code myself. However, since I had to look it up, I wasn't sure if this needed to be cited, so I'm including citation to be safe here. https://www.w3schools.com/css/css_table_style.asp */
+
+.featuredres h3{
+background: linear-gradient(90deg, #ffcb05 0%, #ffeeb3 31%, #ffffff 65%);
+margin-left: -1rem;
+padding: 1rem;
+/* used w3 schools gradient generator for background, but I did everthing else here. Link: https://www.w3schools.com/tools/tool_css_gradient.php */
+}
+
+/* checklist and numbers class styling below was taken & modified from Claude. Citation after the .numbers styling.*/
+
+.checklist { list-style: none; padding-left: 0; }
+.checklist li { padding-left: 1.75rem; position: relative; }
+.checklist li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00488b;
+    font-weight: 700;
+}
+
+.numbers { list-style: none; padding: 0; counter-reset: step; }
+.numbers li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+.numbers li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background-color: #00488b;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 1.75rem;
+    font-weight: 700;
+}
+    /* Content taken & modified from Claude with the prompts: "I have a lot of lists on my page, what are some ways I could varying the css styling of them so that they don't all look the same?"
+    Claude. (2026). Claude (Sonnet 5.5 October 18th version) [Large language model]. */
