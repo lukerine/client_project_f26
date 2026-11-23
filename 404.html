@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!--font-family is Montserrat and the code is copied from W3 schools: https://www.w3schools.com/howto/howto_google_fonts.asp> -->
+    <title>404 - Page Not Found</title>
+</head>
+<body class="p404-2">
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+<div class="p404">
+    <header>
+      <div class="headflex">
+      <img src="images/UMSI_full_W.png" alt="Block M and the words University of Michigan School of Information">
+        <nav>
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "beginning.html">Beginning Your Experience</a></li>
+                <li><a href = "during.html">During Your Experience</a></li>
+                <li><a href = "ending.html">Ending Your Experience</a></li>
+            </ul>
+        </nav>
+      </div>
+    <h1>404 - Page Not Found</h1>
+    </header>
+
+    <main id="main">
+        <h2>Oops! The page you are looking for does not exist.</h2>
+        <p>It seems you've stumbled upon a broken link or mistyped the URL.</p> <br>
+        <a href="index.html">Return to the home page</a>
+        <img src="images/squirrel.png" alt="A squirrel eating a cookie">
+    </main>
+</div>
+    <footer>
+      <img src="images/UMSI_stacked_W.png" alt="Block M and the words University of Michigan School of Information">
+      <p>University of Michigan School of Information | <a href="https://www.si.umich.edu/programs/engaged-learning/about-engaged-learning-office">Engaged Learning Office </a></p>
+      <address>
+        <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
+      </address>
+      <p>&copy; <span id="year"></span> Regents of the University of Michigan</p>
+      <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+      </script>
+      <!-- Content taken & modified from https://www.codexworld.com/how-to/get-current-year-to-display-dynamic-year-in-copyright-using-javascript/ (the automatic year update linked in the week 12 lecture slides)-->
+    </footer>
+</body>
+</html>
+

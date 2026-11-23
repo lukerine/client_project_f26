@@ -13,7 +13,8 @@
 
     <header>
 
-        <img src="images/UMSI_full_W.png" alt="Block M and the words University of Michigan School of Information">
+      <div class="headflex">
+      <img src="images/UMSI_full_W.png" alt="Block M and the words University of Michigan School of Information">
         <nav>
             <ul>
                 <li><a href = "index.html" class="active">Home</a></li>
@@ -22,19 +23,21 @@
                 <li><a href = "ending.html">Ending Your Experience</a></li>
             </ul>
         </nav>
+      </div>
     <h1>Welcome to the UMSI Engaged Learning Office</h1>
     </header>
   
-    <main id="main">
-    <section class="ind_sect1">
-      <h2>Build Skills. Work with Partners. Have an Impact.</h2> <hr>
+<main id="main">
+<div class="grid">
+<section class="sect1">
+    <h2>Build Skills. Work with Partners. Have an Impact.</h2> <hr>
       <p>
        The UMSI Engaged Learning Office connects students with opportunities to apply classroom knowledge to real challenges. Use this site to prepare for your experience, manage your work, and reflect on what you learned.
       </p>
 
       <iframe src="https://www.youtube.com/embed/81ZO9RfIJEQ?si=tBp82YWZMl1u7CVS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
          <!-- Note: this iframe might cause an Axe ARIA error - that's not on you that's on YouTube! -->
-    </section>
+ </section>
 
 <section class="ind_sect2">
     <h2>Why Use This Resource?</h2> <hr>
@@ -118,7 +121,7 @@
     </div>
     <p>Questions? Email <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu </a>.</p>
   </aside>
-
+</div>
 
         <!-- Content taken & modified from UMGPT with the prompt, "Write me a webpage of intro content to help meet the following requirements - this is for the home page": and then pasted in the client objectives & project requirements"
         UMGPT. (2026). UMGPT ( GPT-5.6 Sol September 7th version) [Large language model]. -->
@@ -129,7 +132,11 @@
       <address>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
+      <p>&copy; <span id="year"></span> Regents of the University of Michigan</p>
+      <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+      </script>
+      <!-- Content taken & modified from https://www.codexworld.com/how-to/get-current-year-to-display-dynamic-year-in-copyright-using-javascript/ (the automatic year update linked in the week 12 lecture slides)-->
     </footer>
 </body>
 </html>

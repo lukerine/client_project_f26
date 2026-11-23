@@ -9,10 +9,9 @@
         <title>During Your ELO Journey</title>
     </head>
     <body>
-        
-        <header>
-
-    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+      <div class="skip"><a href="#main">Skip to Main Content</a></div>  
+      <header>
+       <div class="headflex">
          <img src="images/UMSI_full_W.png" alt="Block M and the words University of Michigan School of Information">
         <nav>
             <ul>
@@ -22,11 +21,12 @@
                 <li><a href = "ending.html">Ending Your Experience</a></li>
             </ul>
         </nav>
+      </div>
         <h1>During Your Journey</h1>
   </header>
 <main id="main">
 
-<section>
+<section class="sect1">
     <h2>Navigating Your Active Project</h2><hr>
     <p>Master the art of adaptive project management, human-centered fieldwork, and constructive feedback as you execute your project in real time.</p>
     <img src="images/meeting2.jpg" alt="Three people sitting at a table having a meeting.">  
@@ -44,6 +44,7 @@
     <h2>Managing & Executing in the Field</h2><hr>
     <p><em>Conducting research, tracking progress, and maintaining clear communication with project sponsors.</em></p>
 
+<div class="beg_grid">
 <img src="images/laptop.jpg" alt="A student in a blue sweatshirt holding a laptop.">
 
     <article class="dur_list">
@@ -64,6 +65,7 @@
         <li>Document progress, challenges, and decisions for future reference.</li>
     </ol>
     </article>
+  </div>
 </section>
 
 <section>
@@ -119,8 +121,12 @@
       <address>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
-    </footer> 
+      <p>&copy; <span id="year"></span> Regents of the University of Michigan</p>
+      <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+      </script>
+      <!-- Content taken & modified from https://www.codexworld.com/how-to/get-current-year-to-display-dynamic-year-in-copyright-using-javascript/ (the automatic year update linked in the week 12 lecture slides)-->
+    </footer>
 
  </body>
 </html>

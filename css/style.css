@@ -342,3 +342,197 @@ padding: 1rem;
 }
     /* Content taken & modified from Claude with the prompts: "I have a lot of lists on my page, what are some ways I could varying the css styling of them so that they don't all look the same?"
     Claude. (2026). Claude (Sonnet 5.5 October 18th version) [Large language model]. */
+
+.p404 h1 { 
+    font-size: 2.5rem; 
+    font-weight: 700;
+    color: #00274C;
+    text-align: center;
+    margin: 0.5rem -1rem 0; 
+    padding: 2.5rem 0rem;
+    background: #ffd52b;
+}
+
+.p404-2 {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.p404 {
+    flex: 1;
+}
+
+.p404 main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.p404 main h2 {
+    grid-column: 1 / -1;
+}
+
+.p404 main p {
+    grid-column: 1 / span 2;
+    margin-top: 2rem;
+}
+
+.p404 main img {
+    grid-column: 3 / span 1;
+    margin-bottom: -1rem;
+    margin-right: -1rem;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    place-self: end;
+}
+
+.p404 main a {
+    color: #0b3d6c;
+    background-color: #FFCB05;
+    text-decoration: none;
+    padding: 4px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    justify-self: start;
+    align-self: start;
+}
+
+.p404 main a:hover, .p404 main a:focus {
+    border: 2px solid #005fb8;
+}
+
+.p404 h2 {
+    text-transform: none;
+}
+
+@media (min-width: 768px) /* tablet view */ {
+
+.headflex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 4rem;
+}
+
+.headflex img {
+    width: 400px;
+    margin: 0 0 0.5rem;
+}
+
+.headflex nav {
+    flex: 1;
+}
+
+.headflex nav ul {
+    justify-content: space-around;
+}
+
+main {
+margin: 0 2rem;
+}
+
+.p404 main img {
+    margin-right: -3rem;
+}
+
+.sect1, .ind_sect2, .beg_grid, .beg_grid2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+h2, .ind_sect2 p, hr, .beg_grid article:last-of-type, .beg_grid2 section {
+    grid-column: 1 / -1;
+}
+
+h2 {
+    margin: 1rem 0 0;
+}
+
+.sect1 p, .ind_sect2 img, .beg_grid img, .beg_grid2 img {
+    grid-column: 1 / span 2;
+}
+
+.sect1 p {
+    place-self: center;
+    border-left: 4px solid #FFCB05;
+    padding-left: 1.6rem;
+    margin-left: 0.25rem;
+}
+
+.ind_sect2 img, iframe, .beg_grid img, .beg_grid2 img, .sect1 img {
+    object-fit: cover;
+    height: 90%;
+    width: 90%;
+    place-self: center;
+    margin: 0;
+}
+
+.ind_sect2 ul, iframe, .beg_grid > article:first-of-type, .beg_grid2 > article:first-of-type, .sect1 img {
+    grid-column: 3 / span 3;
+}
+
+.sect1 p {
+    font-size: 1.3rem;
+}
+
+.beg_grid h3, .beg_grid2 h3 {
+    margin-top: 1rem;
+}
+
+.ind_aside {
+    margin: 0 -3rem -3rem;
+    padding: 0.5rem 2.75rem 3rem;
+}
+
+footer img {
+    width: 120px;
+}
+
+footer {
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+}
+
+li br {
+    display: none;
+}
+
+}
+
+@media (min-width: 1200px) /* desktop view */ {
+    
+.ind_sect2 li {
+    margin: 2rem 0;
+}
+
+.beg_grid2 img, .beg_grid img {
+    grid-row: 1 / span 2;
+}
+
+.beg_grid > article:first-of-type, .beg_grid2 > article:first-of-type {
+    grid-row: 1
+}
+
+.beg_grid > article:last-of-type, .beg_grid2 section { 
+    grid-row: 2;
+    grid-column: 3 / span 3;
+}
+
+.questions ul {
+    display: block;
+    columns: 2;
+    column-gap: 3rem;
+}
+
+.questions li {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    break-inside: avoid; 
+}
+
+ /* ".questions" content taken & modified from Claude with the prompts: "To remedy the white space from 'questions to consider', would it be possible to just split the list at desktop view so four questions sit on the left and three on the right? that way it spans horizonal rather than vertical?" (screenshot of the section was attached so claude could see what I was talking about)
+ Claude. (2026). Claude (Sonnet 5.5 November 22nd version) [Large language model]. */
+
+}
