@@ -532,7 +532,29 @@ li br {
     break-inside: avoid; 
 }
 
- /* ".questions" content taken & modified from Claude with the prompts: "To remedy the white space from 'questions to consider', would it be possible to just split the list at desktop view so four questions sit on the left and three on the right? that way it spans horizonal rather than vertical?" (screenshot of the section was attached so claude could see what I was talking about)
+ /* ".questions" content taken & modified from Claude with the prompt: "To remedy the white space from 'questions to consider', would it be possible to just split the list at desktop view so four questions sit on the left and three on the right? that way it spans horizonal rather than vertical?" (screenshot of the section was attached so claude could see what I was talking about)
  Claude. (2026). Claude (Sonnet 5.5 November 22nd version) [Large language model]. */
 
 }
+
+#filter {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.25rem 0 0.5rem;
+    border: 2px solid #959595;
+    border-radius: 6px;
+}
+
+label[for="filter"] {
+    font-weight: 700;
+    color: #00488b;
+}
+
+#filter-status {
+    font-size: 0.875rem;
+    margin: 0 0 0.5rem;
+}
+
+/* the filter content taken & modified from Claude with the prompt: "I want to add a "challenging element" to my website with advanced css or javascript to give it some flare. I think it would be cool to make my table collapsible. What do you think should I do that or something else?" (Claude then suggested that a search/filter feature would be more helpful and provided base code that I could use to add it)
+Claude. (2026). Claude (Sonnet 5.5 November 22nd version) [Large language model]. */

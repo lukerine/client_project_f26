@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="css/html5reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!--font-family is Montserrat and the code is copied from W3 schools: https://www.w3schools.com/howto/howto_google_fonts.asp> -->
+        <link rel="icon" href="images/favicon.png" type="image/png">
+        <script src="js/filter.js" defer></script>
         <title>During Your ELO Journey</title>
     </head>
     <body>
@@ -70,7 +72,10 @@
 
 <section>
     <h2>Resources for Active Project Management</h2><hr>
-    <table>
+  <label for="filter">Filter resources</label>
+  <input type="search" id="filter" placeholder="Try “feedback” or “worksheet”">
+  <p id="filter-status" aria-live="polite"></p>
+  <table>
   <tr>
     <th>Category</th>
     <th>Resource Name</th>
